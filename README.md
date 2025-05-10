@@ -1,4 +1,4 @@
-# 🧪 Cypress E2E & API Automation – Saucedemo
+# 🧪 Cypress E2E Automation – Saucedemo
 
 This project contains a complete Cypress test suite for **End-to-End (E2E)** scenarios on [saucedemo.com](https://www.saucedemo.com). The tests follow **best practices** using **custom commands**, clean structure, and are divided by features.
 
