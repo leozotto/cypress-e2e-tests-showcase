@@ -5,17 +5,20 @@ This project contains a complete Cypress test suite for **End-to-End (E2E)** sce
 ## 📁 Project Structure
 
 cypress/
-├── e2e/
-│ ├── auth/
-│ ├── cart/
-│ ├── checkout/
-│ ├── products/
-│ └── logout/
-├── support/
-│ └── commands.js
-├── fixtures/
-│ └── example.json
 
+ ├── e2e/  
+ │ ├── auth/  
+ │ ├── cart/  
+ │ ├── checkout/  
+ │ ├── products/      
+ │ └── logout/   
+ ├── support/   
+ │ └── commands.js  
+ ├── fixtures/  
+ │ └── example.json  
+
+
+  
 - `auth/` – Login scenarios (valid, invalid, locked user)
 - `cart/` – Add and remove products
 - `checkout/` – Checkout flow and validation
@@ -26,7 +29,7 @@ cypress/
 ---
 
 ## ✅ Test Scenarios
-|----------------------------------------------------------------|
+
 | # | Feature    | Scenario Description                          |
 |---|------------|-----------------------------------------------|
 | 1 | Login      | Valid login with standard user                |
@@ -39,7 +42,6 @@ cypress/
 | 8 | Products   | Sort products by price (low to high)          |
 | 9 | Products   | View product details                          |
 |10 | Logout     | Logout from application                       |
-|----------------------------------------------------------------|
 
 ---
 
@@ -50,5 +52,5 @@ cypress/
 - GitHub Actions (optional for CI)
 
 ---
-👨‍💻@Author
+👨‍💻@Author  
 Leonardo Zotto
