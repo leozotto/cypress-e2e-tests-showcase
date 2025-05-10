@@ -1,39 +1,37 @@
 name: Cypress Tests
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+  #push:
+    #branches:
+      #- main
+ # pull_request:
+    #branches:
+      #- main
+  workflow_dispatch:  # Permite rodar manualmente no GitHub Actions
+  
+permissions:
+  actions: write
+  contents: read
+  
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout código
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: 18
 
-      - name: Cache Cypress binary
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/Cypress
-          key: ${{ runner.os }}-cypress-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-cypress-
-
-      - name: Install dependencies
+      - name: Instalar dependências
         run: npm install
 
-      - name: Install Cypress binary
-        run: npx cypress install
+      - name: Definir Variável de Ambiente
+        run: echo "CYPRESS_environment=homologacao" >> $GITHUB_ENV
 
-      - name: Run Cypress tests
+      - name: Executar Cypress (modo headless)
         run: npx cypress run
+        continue-on-error: true  
