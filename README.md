@@ -13,8 +13,7 @@ cypress/
  │ └── logout/   
  ├── support/   
  │ └── commands.js  
- ├── fixtures/  
- │ └── example.json  
+
   
 - `auth/` – Login scenarios (valid, invalid, locked user)
 - `cart/` – Add and remove products
