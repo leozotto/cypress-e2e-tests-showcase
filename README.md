@@ -5,7 +5,6 @@ This project contains a complete Cypress test suite for **End-to-End (E2E)** sce
 ## 📁 Project Structure
 
 cypress/
-
  ├── e2e/  
  │ ├── auth/  
  │ ├── cart/  
@@ -16,8 +15,6 @@ cypress/
  │ └── commands.js  
  ├── fixtures/  
  │ └── example.json  
-
-
   
 - `auth/` – Login scenarios (valid, invalid, locked user)
 - `cart/` – Add and remove products
@@ -44,7 +41,6 @@ cypress/
 |10 | Logout     | Logout from application                       |
 
 ---
-
 ## 🧰 Technologies
 
 - [Cypress](https://www.cypress.io/) 14+
